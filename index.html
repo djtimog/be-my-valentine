@@ -6,7 +6,7 @@
     <title>Be My Valentine? 💖</title>
 
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
       *,
       *::after,
@@ -29,7 +29,7 @@
         overflow: hidden;
         perspective: 1000px;
       }
-      
+
       .title {
         position: absolute;
         top: 30px;
@@ -37,16 +37,16 @@
         color: white;
         z-index: 999;
         text-align: center;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
       }
-      
+
       .reloadBtn {
         position: absolute;
         bottom: 110px;
         z-index: 999;
         padding: 8px 30px;
         font-size: 18px;
-        font-family: 'Poppins', sans-serif;
+        font-family: "Poppins", sans-serif;
         border-radius: 5px;
         border: none;
         cursor: pointer;
@@ -55,7 +55,7 @@
       .reloadBtn:hover {
         background-color: #eaeaea;
       }
-      
+
       .night {
         position: fixed;
         left: 50%;
@@ -1266,120 +1266,161 @@
 
       /* Add water drop styles */
       .water-drop {
-            position: absolute;
-            width: 40px;
-            height: 40px;
-            border: 2px solid rgba(0, 191, 255, 0.5);
-            border-radius: 50%;
-            animation: ripple 1.5s infinite linear;
-            pointer-events: none;
-            z-index: 1;
-        }
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        border: 2px solid rgba(0, 191, 255, 0.5);
+        border-radius: 50%;
+        animation: ripple 1.5s infinite linear;
+        pointer-events: none;
+        z-index: 1;
+      }
 
-        @keyframes ripple {
-            0% {
-                transform: scale(0);
-                opacity: 0.8;
-            }
-            100% {
-                transform: scale(3);
-                opacity: 0;
-            }
+      @keyframes ripple {
+        0% {
+          transform: scale(0);
+          opacity: 0.8;
         }
+        100% {
+          transform: scale(3);
+          opacity: 0;
+        }
+      }
 
-        /* Keep flowers above water drops */
-        .flower, .flower-container {
-            z-index: 2;
-        }
+      /* Keep flowers above water drops */
+      .flower,
+      .flower-container {
+        z-index: 2;
+      }
 
-        h1 {
-            font-size: 2.5rem;
-            color: #ff4d6d;
-            opacity: 0;
-            transform: translateY(-20px);
-            animation: fadeIn 2s ease-in-out forwards;
-        }
+      h1 {
+        font-size: 2.5rem;
+        color: #ff4d6d;
+        opacity: 0;
+        transform: translateY(-20px);
+        animation: fadeIn 2s ease-in-out forwards;
+      }
 
-        @keyframes fadeIn {
-            0% {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(-20px);
         }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
 
-        .main-page{
-          position: absolute;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 100%;
-          height: 100%;
-          z-index: 1000;
-        }
+      .main-page {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1000;
+      }
 
-        .button-container{
-          margin-top: auto;
-          margin-bottom: auto;
-          animation: fadeIn 2s ease-in-out forwards;
+      .button-container {
+        margin-top: auto;
+        margin-bottom: auto;
+        animation: fadeIn 2s ease-in-out forwards;
+      }
+
+      .yes-button,
+      .no-button {
+        padding: 0.7rem 1.2rem;
+        border-radius: 10%;
+        border: 0px;
+        margin: 0px 10px;
+        font-weight: 900;
+        animation: ButtonAnimate 5s ease-in-out forwards;
+      }
+
+      @keyframes ButtonAnimate {
+        0% {
+          opacity: 0;
+          padding: 1.5rem;
         }
-        
-        .yes-button, .no-button{
+        100% {
+          opacity: 1;
           padding: 0.7rem 1.2rem;
-          border-radius: 10%;
-          border: 0px;
-          margin: 0px 10px;
-          font-weight: 900;
-          animation: ButtonAnimate 4s ease-in-out forwards;
         }
-        
-        @keyframes ButtonAnimate {
-          0%{
-            opacity: 0;
-            padding: 1.5rem;
-          }100%{
-            opacity: 1;
-            padding: 0.7rem 1.2rem;
-          }
-        }
+      }
 
-        .yes-button{
-          background-color: greenyellow;
+      .yes-button {
+        background-color: white;
+      }
+
+      .yes-button:hover {
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+      .no-button {
+        background-color: red;
+      }
+      .no-button:hover {
+        background-color: rgba(255, 0, 0, 0.5);
+      }
+      .love {
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        font-size: large;
+        z-index: 50;
+        animation: ripple 1.5s infinite linear;
+      }
+      .audio {
+        z-index: -100;
+      }
+
+      .blushing-image {
+        max-width: 100%;
+        height: auto;
+        max-height: 50vh;
+        animation: bounce 2s infinite forwards;
+      }
+
+      @keyframes bounce {
+        0% {
+          transform: translateY(40px);
         }
-        
-        .yes-button:hover{
-          background-color: rgba(172, 255, 47, 0.5);
+        50% {
+          transform: translateY(0px);
         }
-        .no-button{
-          background-color: red;
+        100% {
+          transform: translateY(40px);
         }
-        .no-button:hover{
-          background-color: rgba(255, 0, 0, 0.5);
-        }
-        .love{
-          position: absolute;
-            width: 40px;
-            height: 40px;
-          font-size: small;
-          z-index: 50;
-          animation: ripple 1.5s infinite linear;
-        }
+      }
+
+      .yes-page {
+        width: 100%;
+        height: 100%;
+        color: white;
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+      }
+
+      h2 {
+        font-weight: 900;
+        color: white;
+        font-size: x-large;
+      }
     </style>
   </head>
 
   <body class="not-loaded">
     <div class="main-page">
       <h1 class="title">Will you be my Valentine? 💘</h1>
-
+      
       <div class="button-container">
         <button class="yes-button" onclick="yesClick()">YES</button>
         <button class="no-button" onclick="noClick()">NO</button>
+        <audio src="/mixed.mp3" class="audio" autoplay loop></audio>
       </div>
-
-        <button class="reloadBtn" onclick="bloomFlower()">My Love</button>
+      
+      <button class="reloadBtn" onclick="bloomFlower()">My Love</button>
     </div>
     <div class="night"></div>
     <div class="flowers">
@@ -1692,77 +1733,112 @@
       </div>
     </div>
 
-    
     <script>
       function bloomFlower() {
-          if (document.body.classList.contains('not-loaded')) {
-              document.body.classList.remove("not-loaded");
-              document.querySelector('.reloadBtn').textContent = 'Reload Page';
-          } else {
-            location.reload();
-          }
+        if (document.body.classList.contains("not-loaded")) {
+          document.body.classList.remove("not-loaded");
+          document.querySelector(".reloadBtn").textContent = "Reload Page";
+        } else {
+          location.reload();
+        }
       }
 
       bloomFlower();
 
       function createWaterDrop() {
-            const drop = document.createElement('div');
-            drop.className = 'water-drop';
-            
-            // Random position
-            const x = Math.random() * window.innerWidth;
-            const y = Math.random() * window.innerHeight;
-            
-            drop.style.left = `${x}px`;
-            drop.style.top = `${y}px`;
-            
-            // Random animation delay
-            drop.style.animationDelay = `${Math.random() * 1.5}s`;
-            
-            document.body.appendChild(drop);
-            
-            // Remove element after animation
-            setTimeout(() => drop.remove(), 1500);
-        }
+        const drop = document.createElement("div");
+        drop.className = "water-drop";
 
-        function createRandomLove(){
-          const love = document.createElement('p');
-            love.className = 'love';
-            love.innerText="💘"
-            
-            // Random position
-            const x = Math.random() * window.innerWidth;
-            const y = Math.random() * window.innerHeight;
-            
-            love.style.left = `${x}px`;
-            love.style.top = `${y}px`;
-            
-            // Random animation delay
-            love.style.animationDelay = `${Math.random() * 1.5}s`;
-            
-            document.body.appendChild(love);
-            
-            // Remove element after animation
-            setTimeout(() => love.remove(), 1500);
-        }
-        // Create continuous water drops
-        function startWaterAnimation() {
-            setInterval(createWaterDrop, 500);
-        }
+        // Random position
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
 
-        // Start animations when page loads
-        window.onload = () => {
-            startWaterAnimation();
-        };
+        drop.style.left = `${x}px`;
+        drop.style.top = `${y}px`;
 
-        // Make water drops appear at random intervals
+        // Random animation delay
+        drop.style.animationDelay = `${Math.random() * 1.5}s`;
+
+        document.body.appendChild(drop);
+
+        // Remove element after animation
+        setTimeout(() => drop.remove(), 1500);
+      }
+
+      function createRandomLove() {
+        const love = document.createElement("p");
+        const emojis = ["❤️", "💖", "😍", "🥰", "💘"];
+
+        const randomText = emojis[Math.floor(Math.random() * emojis.length)];
+        love.innerText = randomText;
+
+        love.className = "love";
+
+        // Random position
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+
+        love.style.left = `${x}px`;
+        love.style.top = `${y}px`;
+
+        // Random animation delay
+        love.style.animationDelay = `${Math.random() * 1}s`;
+
+        document.body.appendChild(love);
+
+        // Remove element after animation
+        setTimeout(() => love.remove(), 1500);
+      }
+
+      let yesIsClicked = false;
+
+      function noClick() {
+        const yesButton = document.getElementsByClassName("yes-button")[0];
+        const currentFontSize = parseInt(
+          window.getComputedStyle(yesButton).fontSize
+        );
+        yesButton.style.fontSize = `${currentFontSize + 30}px`;
+      }
+
+      function yesClick() {
+        yesIsClicked = true;
+        const body = document.body;
+        body.innerHTML = `
+              <div class="yes-page">
+                <audio src="/milli.mp3" class="audio" autoplay loop></audio>
+                <h1>I know you will always say YES!!</h1>
+                <img src="/blushing-image.png" alt="blushingImage" class="blushing-image" />
+
+                <h2>My Love Letter</h2>
+
+                <a href="/audio-(2).mp3" title="love-letter" download>
+                  <button>Click to download</button>
+                </a>
+
+              </div>
+          `;
+      }
+
+      function startWaterAnimation() {
         setInterval(() => {
+          if (!yesIsClicked) {
+            createRandomLove();
             createWaterDrop();
-        }, Math.random() * 1000 + 500);
-        function noClick(){
-          const yesButton = document.getElementsByClassName("yes-button")
-          yesButton.style.size('30')
+          }
+        }, 1000);
+      }
+
+      window.onload = () => {
+        startWaterAnimation();
+      };
+
+      setInterval(() => {
+        if (!yesIsClicked) {
+          createRandomLove();
+          createWaterDrop();
         }
+      }, Math.random() * 1000 + 500);
+
     </script>
   </body>
 </html>
