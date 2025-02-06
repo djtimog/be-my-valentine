@@ -1831,13 +1831,12 @@
         startWaterAnimation();
         setTimeout(() => {
           const audioDiv = document.createElement("audio");
-
-          audioDiv.src = "audio/mixed.mp3";
-          audioDiv.autoplay = true;
-          audioDiv.loop = true;
-          document.body.appendChild(audioDiv);
-        }, 2000);
-      };
+            audioDiv.src = "audio/mixed.mp3";
+            audioDiv.autoplay = true;
+            audioDiv.loop = true;
+            document.body.appendChild(audioDiv);
+          }, 2000);
+          };
 
       setInterval(() => {
         if (!yesIsClicked) {
