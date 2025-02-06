@@ -1411,7 +1411,6 @@
   </head>
 
   <body class="not-loaded">
-    <audio src="audio/mixed.mp3" class="audio" autoplay loop></audio>
     <div class="main-page">
       <h1 class="title">Will you be my Valentine? 💘</h1>
 
@@ -1419,7 +1418,7 @@
         <button class="yes-button" onclick="yesClick()">YES</button>
         <button class="no-button" onclick="noClick()">NO</button>
       </div>
-      
+
       <button class="reloadBtn" onclick="bloomFlower()">My Love</button>
     </div>
     <div class="night"></div>
@@ -1830,6 +1829,14 @@
 
       window.onload = () => {
         startWaterAnimation();
+        setTimeout(() => {
+          const audioDiv = document.createElement("audio");
+
+          audioDiv.src = "audio/mixed.mp3";
+          audioDiv.autoplay = true;
+          audioDiv.loop = true;
+          document.body.appendChild(audioDiv);
+        }, 2000);
       };
 
       setInterval(() => {
@@ -1838,7 +1845,6 @@
           createWaterDrop();
         }
       }, Math.random() * 1000 + 500);
-
     </script>
   </body>
 </html>
